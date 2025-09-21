@@ -1,6 +1,36 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
-let amigos = [];
+let listaDeAmigos = [];
+let nombres = 0;
 
-function name(params) {
-    
+
+function enlistar(nombres) {
+    let permitir = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
+    let nombres = document.getElementById('amigo').value;
+    if (nombres === '') {
+        //Verfica si se ingresó un campo vacío
+        asignarTextoElemento('h2','Por favor, ingresa un nombre');
+    } else if (permitir.test(nombres)) {
+        //Verifica si el nombre contiene sólo letras y espacios y lo agrega a la lista
+        listaDeAmigos.push(nombres);    
+        asignarTextoElemento('h2','Digite el nombre de sus amigos');
+        return
+    } else {
+        //Manda un mensaje si el campo estaba lleno pero no era un nombre válido
+        asignarTextoElemento('h2','Por favor, ingresa un nombre válido');
+    }
+}
+
+function asignarTextoElemento(elemento, texto) {
+    let elementoHTML = document.querySelector(elemento);
+    elementoHTML.innerHTML = texto;
+    return;
+}
+
+function limpiar() {
+    document.querySelector('#amigo').value = '';
+}
+
+function agregarAmigo() {
+    enlistar();
+    limpiar();
 }
