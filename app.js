@@ -4,8 +4,9 @@ let nombres = 0;
 
 
 function enlistar(nombres) {
-    let permitir = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
     let nombres = document.getElementById('amigo').value;
+    let permitir = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
+
     if (nombres === '') {
         //Verfica si se ingresó un campo vacío
         asignarTextoElemento('h2','Por favor, ingresa un nombre');
@@ -18,6 +19,7 @@ function enlistar(nombres) {
         //Manda un mensaje si el campo estaba lleno pero no era un nombre válido
         asignarTextoElemento('h2','Por favor, ingresa un nombre válido');
     }
+    limpiar();
 }
 
 function asignarTextoElemento(elemento, texto) {
@@ -32,5 +34,4 @@ function limpiar() {
 
 function agregarAmigo() {
     enlistar();
-    limpiar();
 }
