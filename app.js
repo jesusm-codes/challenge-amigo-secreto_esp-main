@@ -21,13 +21,6 @@ function agregarAmigo() {
     limpiar();
 }
 
-function asignarTextoElemento(elemento, texto) {
-    let elementoHTML = document.querySelector(elemento);
-    elementoHTML.innerHTML = texto;
-    return;
-}
-
 function limpiar() {
     document.querySelector('#amigo').value = '';
 }
-
