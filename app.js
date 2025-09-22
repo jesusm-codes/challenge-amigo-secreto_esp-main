@@ -2,7 +2,7 @@
 let listaDeAmigos = [];
 
 
-function enlistar(nombres) {
+function agregarAmigo() {
     let nombres = document.getElementById('amigo').value;
     let permitir = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
 
@@ -31,6 +31,3 @@ function limpiar() {
     document.querySelector('#amigo').value = '';
 }
 
-function agregarAmigo() {
-    enlistar();
-}
