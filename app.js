@@ -35,12 +35,11 @@ function listaHTML(listaDeAmigos) {
 }
 
 function sortearAmigo() {
-    if (listaDeAmigos === '') {
+    if (listaDeAmigos.length === 0) {
     return
-    } else {
-        let aleatorio = Math.floor(Math.random()*listaDeAmigos.length);
-        let sorteo = document.getElementById("resultado");
-
-        sorteo.innerHTML='El amigo secreto sorteado es ' + listaDeAmigos[aleatorio];
     }
+    let aleatorio = Math.floor(Math.random()*listaDeAmigos.length);
+    let sorteo = document.getElementById("resultado");
+    sorteo.innerHTML='El amigo secreto sorteado es ' + listaDeAmigos[aleatorio];
+    
 }
