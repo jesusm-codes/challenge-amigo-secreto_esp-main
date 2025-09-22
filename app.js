@@ -11,7 +11,8 @@ function agregarAmigo() {
         alert('Por favor, inserte un nombre');
     } else if (permitir.test(nombres)) {
         //Verifica si el nombre contiene sólo letras y espacios y lo agrega a la lista
-        listaDeAmigos.push(nombres);    
+        listaDeAmigos.push(nombres);
+        listaHTML();
         limpiar();
         return
     } else {
@@ -23,4 +24,17 @@ function agregarAmigo() {
 
 function limpiar() {
     document.querySelector('#amigo').value = '';
+}
+
+function listaHTML(listaDeAmigos) {
+    let ListaHTML = document.querySelector('ul');
+    let elementosDeListaHTML = '';
+
+    for (let i=0; i<listaDeAmigos.lenght; i++) {
+        elementosDeListaHTML += '<li>' + listaDeAmigos[i] + '</li>';
+    }
+
+    ListaHTML.innerHTML = elementosDeListaHTML;
+
+
 }
