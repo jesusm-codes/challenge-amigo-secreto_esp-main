@@ -33,8 +33,5 @@ function listaHTML(listaDeAmigos) {
     for (let i=0; i<listaDeAmigos.lenght; i++) {
         elementosDeListaHTML += '<li>' + listaDeAmigos[i] + '</li>';
     }
-
     ListaHTML.innerHTML = elementosDeListaHTML;
-
-
 }
