@@ -8,15 +8,15 @@ function agregarAmigo() {
 
     if (nombres === '') {
         //Verfica si se ingresó un campo vacío
-        asignarTextoElemento('h2','Por favor, ingresa un nombre');
+        alert('Por favor, inserte un nombre');
     } else if (permitir.test(nombres)) {
         //Verifica si el nombre contiene sólo letras y espacios y lo agrega a la lista
         listaDeAmigos.push(nombres);    
-        asignarTextoElemento('h2','Digite el nombre de sus amigos');
+        limpiar();
         return
     } else {
         //Manda un mensaje si el campo estaba lleno pero no era un nombre válido
-        asignarTextoElemento('h2','Por favor, ingresa un nombre válido');
+        alert('Por favor, ingresa un nombre válido');
     }
     limpiar();
 }
